@@ -1,9 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Droplets, Utensils, GraduationCap, Stethoscope, ArrowRight } from "lucide-react";
-import waterProject from "@/assets/water-project.jpg";
-import foodDistribution from "@/assets/food-distribution.jpg";
+import waterProject from "@/assets/drilling-rig-somalia.jpg";
+import foodDistribution from "@/assets/food-aid-packages.jpg";
 import educationProgram from "@/assets/education-program.jpg";
+import healthcareClinic from "@/assets/healthcare-clinic.jpg";
 
 const ProjectsSection = () => {
   const projects = [
@@ -35,7 +36,7 @@ const ProjectsSection = () => {
       icon: Stethoscope,
       title: "Healthcare Services",
       description: "Mobile health clinics, vaccination programs, and maternal care services bringing essential healthcare to remote areas.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: healthcareClinic,
       impact: "2,000+ patients treated monthly",
       color: "warmth",
     },
