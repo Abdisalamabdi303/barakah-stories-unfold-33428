@@ -4,24 +4,24 @@ import { Heart, Users, Target, Shield } from "lucide-react";
 const AboutSection = () => {
   const values = [
     {
-      icon: Heart,
-      title: "Compassion",
-      description: "Every action we take is driven by genuine care and empathy for those we serve.",
-    },
-    {
       icon: Shield,
-      title: "Transparency",
-      description: "We maintain complete openness about our operations, finances, and impact.",
+      title: "Integrity",
+      description: "Upholding transparency, fairness, and public trust in all our operations.",
     },
     {
       icon: Users,
-      title: "Community",
-      description: "We believe in empowering local communities to create lasting change.",
+      title: "Collaboration",
+      description: "Working with all stakeholders, locally and internationally, to achieve greater impact.",
     },
     {
       icon: Target,
-      title: "Impact",
-      description: "Every donation and effort is directed toward measurable, sustainable outcomes.",
+      title: "Sustainable Development",
+      description: "Seeking lasting solutions for community improvement and self-sufficiency.",
+    },
+    {
+      icon: Heart,
+      title: "Quality and Competence",
+      description: "Ensuring high-standard, evidence-based humanitarian services.",
     },
   ];
 
@@ -33,8 +33,10 @@ const AboutSection = () => {
             About Somali Barakah Organization
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Founded in 2019, Somali Barakah Organization is dedicated to transforming lives 
-            through sustainable humanitarian programs that address the most pressing needs in Somalia.
+            Somali Barakah Organization is an independent humanitarian institution serving communities on a voluntary basis. 
+            Our goal is to ensure every Somali has access to essential services and resources to build a healthier, 
+            more prosperous future through evidence-based programs, professional training, and community empowerment - 
+            working in collaboration with both Somali and international organizations.
           </p>
         </div>
 
@@ -42,28 +44,28 @@ const AboutSection = () => {
           <div>
             <h3 className="text-3xl font-bold text-foreground mb-6">Our Mission</h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              To provide essential services and resources that enable Somali communities to thrive. 
-              We focus on sustainable solutions that create lasting impact in the areas of clean water access, 
-              food security, quality education, and healthcare.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Through partnerships with local communities, international donors, and dedicated volunteers, 
-              we work tirelessly to break the cycle of poverty and build hope for future generations.
+              To improve the quality of life for Somali communities by establishing reliable systems for delivering 
+              essential services, strengthening local capacity through training and education, and ensuring emergency 
+              preparedness to respond effectively to humanitarian crises.
             </p>
           </div>
           
           <div>
             <h3 className="text-3xl font-bold text-foreground mb-6">Our Vision</h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              A Somalia where every person has access to clean water, nutritious food, quality education, 
-              and healthcare - where communities are empowered to build their own sustainable futures.
+              "To achieve a healthy, prosperous Somali society with access to essential services, 
+              high-quality programs, and a system capable of responding swiftly to humanitarian challenges."
             </p>
             <div className="bg-hope-light/30 rounded-lg p-6">
-              <h4 className="font-semibold text-foreground mb-2">Our Promise</h4>
-              <p className="text-muted-foreground">
-                Every dollar donated goes directly to programs that make a real difference. 
-                We maintain the highest standards of accountability and transparency in all our operations.
-              </p>
+              <h4 className="font-semibold text-foreground mb-4">Our Objectives</h4>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Monitoring and addressing humanitarian needs within communities</li>
+                <li>• Providing essential services through sustainable programs</li>
+                <li>• Strengthening data collection and impact research</li>
+                <li>• Enhancing local workforce capacity to address challenges</li>
+                <li>• Responding to emergencies and crises effectively</li>
+                <li>• Collaborating with national and international organizations</li>
+              </ul>
             </div>
           </div>
         </div>

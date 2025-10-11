@@ -8,8 +8,10 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About Us", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "How You Can Help", href: "#help" },
+    { name: "Our Services", href: "#services" },
+    { name: "Focus Areas", href: "#focus" },
+    { name: "News & Updates", href: "#news" },
+    { name: "Get Involved", href: "#get-involved" },
     { name: "Contact", href: "#contact" },
   ];
 
