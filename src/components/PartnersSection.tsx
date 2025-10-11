@@ -30,31 +30,31 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section id="partners" className="py-20 bg-gradient-to-b from-background to-hope-light/10">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="partners" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-hope-light/10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Partners & Affiliations
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             We collaborate with diverse partners to maximize our impact and ensure sustainable, 
             community-driven solutions to humanitarian challenges.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {partnerCategories.map((category, index) => (
             <Card 
               key={index} 
               className="border-none shadow-lg bg-card"
             >
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="inline-flex p-3 rounded-lg bg-hope/20">
-                    <category.icon className="h-6 w-6 text-hope" />
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="inline-flex p-2 sm:p-3 rounded-lg bg-hope/20 flex-shrink-0">
+                    <category.icon className="h-5 sm:h-6 w-5 sm:w-6 text-hope" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                       {category.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
@@ -77,11 +77,11 @@ const PartnersSection = () => {
           ))}
         </div>
 
-        <div className="bg-hope-light/20 rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
+        <div className="bg-hope-light/20 rounded-lg p-6 sm:p-8 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
             Interested in Partnership?
           </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-4 sm:mb-6">
             We welcome collaboration with organizations that share our commitment to 
             improving lives and building sustainable communities in Somalia.
           </p>

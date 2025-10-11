@@ -7,24 +7,24 @@ import { MapPin, Phone, Mail, Clock, Shield, Building } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-background to-hope-light/10">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-hope-light/10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Get in Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Have questions about our work or want to get involved? We'd love to hear from you. 
             Reach out and join us in making a difference.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card className="shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h3>
+              <CardContent className="p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Send us a Message</h3>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -134,17 +134,18 @@ const ContactSection = () => {
         </div>
 
         {/* Emergency Contact */}
-        <div className="text-center bg-card rounded-lg p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">Emergency Assistance</h3>
-          <p className="text-muted-foreground mb-6">
+        <div className="text-center bg-card rounded-lg p-6 sm:p-8 shadow-lg">
+          <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">Emergency Assistance</h3>
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
             If you need immediate humanitarian assistance or want to report an emergency situation, 
             please contact our 24/7 emergency line.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-destructive hover:bg-destructive/90 text-white">
-              Emergency Hotline: +252 999 888 777
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button className="bg-destructive hover:bg-destructive/90 text-white text-sm sm:text-base">
+              <Phone className="mr-2 h-4 w-4" />
+              <span className="hidden sm:inline">Emergency Hotline: </span>+252 999 888 777
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="text-sm sm:text-base">
               Report Emergency Online
             </Button>
           </div>

@@ -46,29 +46,29 @@ const GetInvolvedSection = () => {
   ];
 
   return (
-    <section id="get-involved" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="get-involved" className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Get Involved
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             There are many ways you can contribute to our mission and help us create 
             lasting positive change in Somali communities.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {ways.map((way, index) => (
             <Card 
               key={index} 
               className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 bg-card"
             >
-              <CardContent className="p-8">
-                <div className={`inline-flex p-4 rounded-lg bg-${way.color}/20 mb-6`}>
-                  <way.icon className={`h-8 w-8 text-${way.color}`} />
+              <CardContent className="p-6 sm:p-8">
+                <div className={`inline-flex p-3 sm:p-4 rounded-lg bg-${way.color}/20 mb-4 sm:mb-6`}>
+                  <way.icon className={`h-6 sm:h-8 w-6 sm:w-8 text-${way.color}`} />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                   {way.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -95,11 +95,11 @@ const GetInvolvedSection = () => {
         </div>
 
         {/* Donation CTA */}
-        <div className="bg-gradient-to-r from-hope to-water rounded-2xl p-12 text-center text-white">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="bg-gradient-to-r from-hope to-water rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 text-center text-white">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
             Make a Donation Today
           </h3>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto opacity-90">
             Your generous donation helps us provide essential services to those who need them most. 
             Every contribution creates lasting impact.
           </p>

@@ -35,35 +35,35 @@ const NewsSection = () => {
   ];
 
   return (
-    <section id="news" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="news" className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Latest News & Updates
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Stay informed about our recent projects, success stories, and impact 
             in communities across Somalia.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {news.map((item, index) => (
             <Card 
               key={index} 
               className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 bg-card group"
             >
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold bg-${item.color}/20 text-${item.color}`}>
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4">
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-${item.color}/20 text-${item.color}`}>
                     {item.category}
                   </span>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                    <Calendar className="h-4 w-4" />
+                  <div className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm">
+                    <Calendar className="h-3 sm:h-4 w-3 sm:w-4" />
                     {item.date}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-hope transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-hope transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">

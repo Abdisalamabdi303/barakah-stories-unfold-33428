@@ -21,30 +21,30 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-hope" />
-            <span className="text-xl font-bold text-foreground">
+            <Heart className="h-6 w-6 md:h-8 md:w-8 text-hope flex-shrink-0" />
+            <span className="text-base sm:text-lg md:text-xl font-bold text-foreground line-clamp-1">
               Somali Barakah Organization
             </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-hope transition-colors font-medium"
+                className="text-sm xl:text-base text-foreground hover:text-hope transition-colors font-medium whitespace-nowrap"
               >
                 {item.name}
               </a>
             ))}
-            <Button variant="default" className="bg-hope hover:bg-hope/90 text-white">
+            <Button variant="default" className="bg-hope hover:bg-hope/90 text-white whitespace-nowrap">
               Donate Now
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -57,19 +57,19 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-hope transition-colors font-medium"
+                  className="text-foreground hover:text-hope transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button variant="default" className="bg-hope hover:bg-hope/90 text-white w-full">
+              <Button variant="default" className="bg-hope hover:bg-hope/90 text-white w-full mt-2">
                 Donate Now
               </Button>
             </div>

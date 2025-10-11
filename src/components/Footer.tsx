@@ -25,16 +25,16 @@ const Footer = () => {
 
   return (
     <footer className="bg-foreground text-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        <div className="py-8 sm:py-10 lg:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Organization Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <Heart className="h-8 w-8 text-hope-light" />
-              <span className="text-xl font-bold">Somali Barakah Organization</span>
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-4 sm:mb-6">
+              <Heart className="h-6 sm:h-8 w-6 sm:w-8 text-hope-light flex-shrink-0" />
+              <span className="text-lg sm:text-xl font-bold">Somali Barakah Organization</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
               Dedicated to transforming lives through sustainable humanitarian programs 
               that create lasting impact in Somalia's most vulnerable communities.
             </p>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -73,7 +73,7 @@ const Footer = () => {
 
           {/* Programs */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Programs</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Our Programs</h3>
             <ul className="space-y-2">
               {programs.map((program) => (
                 <li key={program.name}>
@@ -90,8 +90,8 @@ const Footer = () => {
 
           {/* Resources & Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 mb-6">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Resources</h3>
+            <ul className="space-y-2 mb-4 sm:mb-6">
               {resources.map((resource) => (
                 <li key={resource.name}>
                   <a 
@@ -114,26 +114,26 @@ const Footer = () => {
         </div>
 
         {/* Social Media & Bottom Bar */}
-        <div className="border-t border-gray-700 py-6">
+        <div className="border-t border-gray-700 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-300 text-sm">
-              © 2024 Somali Barakah Organization. All rights reserved. | 
+            <div className="text-gray-300 text-xs sm:text-sm text-center md:text-left">
+              © 2024 Somali Barakah Organization. All rights reserved.<br className="sm:hidden" />
               <span className="text-hope-light ml-1">NPO Registration: NPO/123/2019</span>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-300 text-sm">Follow us:</span>
-              <div className="flex space-x-3">
-                <Facebook className="h-5 w-5 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
-                <Twitter className="h-5 w-5 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
-                <Instagram className="h-5 w-5 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
-                <Linkedin className="h-5 w-5 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <span className="text-gray-300 text-xs sm:text-sm">Follow us:</span>
+              <div className="flex space-x-3 sm:space-x-4">
+                <Facebook className="h-5 w-5 sm:h-6 sm:w-6 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
+                <Twitter className="h-5 w-5 sm:h-6 sm:w-6 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
+                <Instagram className="h-5 w-5 sm:h-6 sm:w-6 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
+                <Linkedin className="h-5 w-5 sm:h-6 sm:w-6 text-gray-300 hover:text-hope-light cursor-pointer transition-colors" />
               </div>
             </div>
           </div>
           
           <div className="mt-4 pt-4 border-t border-gray-700 text-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-xs sm:text-sm px-4">
               "Whoever saves a life, it is as if he has saved all of mankind" - Quran 5:32
             </p>
           </div>
