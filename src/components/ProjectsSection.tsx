@@ -2,9 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Droplets, Utensils, GraduationCap, Stethoscope, ArrowRight } from "lucide-react";
 import waterProject from "@/assets/drilling-rig-somalia.jpg";
-import foodDistribution from "@/assets/food-aid-packages.jpg";
-import educationProgram from "@/assets/education-program.jpg";
-import healthcareClinic from "@/assets/healthcare-clinic.jpg";
+import foodDistribution from "@/assets/aid-distribution.jpg";
+import educationProgram from "@/assets/community-education.jpg";
+import healthcareClinic from "@/assets/community-engagement.jpg";
 
 const ProjectsSection = () => {
   const projects = [

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Target, Shield } from "lucide-react";
+import teamWork from "@/assets/ramadan-distribution-event.jpg";
 
 const AboutSection = () => {
   const values = [
@@ -48,6 +49,13 @@ const AboutSection = () => {
               essential services, strengthening local capacity through training and education, and ensuring emergency 
               preparedness to respond effectively to humanitarian crises.
             </p>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={teamWork}
+                alt="Barakah Organization team distributing aid to communities"
+                className="w-full h-64 object-cover"
+              />
+            </div>
           </div>
           
           <div className="mt-8 lg:mt-0">

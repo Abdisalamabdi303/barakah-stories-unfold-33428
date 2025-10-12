@@ -1,36 +1,44 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, ExternalLink } from "lucide-react";
+import ramadanIftar from "@/assets/ramadan-iftar-2024.jpg";
+import emergencyResponse from "@/assets/field-team-vehicle.jpg";
+import healthcareTraining from "@/assets/community-engagement.jpg";
+import educationSupport from "@/assets/community-education.jpg";
 
 const NewsSection = () => {
   const news = [
     {
-      date: "March 2025",
-      title: "New Water Wells Completed in Baidoa Region",
-      excerpt: "Five new deep water wells have been successfully drilled, providing clean water access to over 3,000 people in rural communities.",
-      category: "Water Projects",
-      color: "water",
+      date: "March 2024",
+      title: "Ramadan 2024: Feed the Fasting Campaign Success",
+      excerpt: "Our Iftar program successfully provided hot meals to thousands of fasting families during Ramadan, bringing hope and nutrition to communities.",
+      category: "Ramadan Programs",
+      color: "warmth",
+      image: ramadanIftar,
     },
     {
-      date: "February 2025",
+      date: "February 2024",
       title: "Emergency Food Distribution Reaches 5,000 Families",
       excerpt: "Our emergency response team delivered food parcels to drought-affected families across three districts, providing critical nutrition support.",
       category: "Emergency Response",
       color: "warmth",
+      image: emergencyResponse,
     },
     {
-      date: "January 2025",
+      date: "January 2024",
       title: "Healthcare Training Program Graduates 50 Community Workers",
       excerpt: "A comprehensive training program equipped local healthcare workers with essential skills to provide better care to their communities.",
       category: "Capacity Building",
       color: "hope",
+      image: healthcareTraining,
     },
     {
-      date: "December 2024",
+      date: "December 2023",
       title: "Education Support Program Launches in 10 Schools",
       excerpt: "New education initiative provides learning materials, teacher training, and infrastructure improvements to benefit over 2,000 students.",
       category: "Education",
       color: "earth",
+      image: educationSupport,
     },
   ];
 
@@ -51,17 +59,25 @@ const NewsSection = () => {
           {news.map((item, index) => (
             <Card 
               key={index} 
-              className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 bg-card group"
+              className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 bg-card group overflow-hidden"
             >
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-${item.color}/20 text-${item.color}`}>
+              <div className="relative h-48 sm:h-56 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-${item.color}/90 text-white mb-2`}>
                     {item.category}
                   </span>
-                  <div className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm">
-                    <Calendar className="h-3 sm:h-4 w-3 sm:w-4" />
-                    {item.date}
-                  </div>
+                </div>
+              </div>
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm mb-3">
+                  <Calendar className="h-3 sm:h-4 w-3 sm:w-4" />
+                  {item.date}
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-hope transition-colors">
                   {item.title}
