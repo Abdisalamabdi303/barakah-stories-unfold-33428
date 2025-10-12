@@ -48,7 +48,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-foreground px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold"
+              className="border-2 border-white text-black hover:bg-white hover:text-foreground px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold"
             >
               See Our Impact <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
             </Button>
