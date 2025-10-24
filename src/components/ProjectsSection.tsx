@@ -5,39 +5,41 @@ import waterProject from "@/assets/drilling-rig-somalia.jpg";
 import foodDistribution from "@/assets/aid-distribution.jpg";
 import educationProgram from "@/assets/community-education.jpg";
 import healthcareClinic from "@/assets/community-engagement.jpg";
+import { useLanguage } from "@/lib/language-context";
 
 const ProjectsSection = () => {
+  const { t } = useLanguage();
   const projects = [
     {
       icon: Droplets,
-      title: "Clean Water Access",
-      description: "Drilling wells and installing water systems to provide sustainable access to clean, safe drinking water for rural communities.",
+      title: t('projects.water.title'),
+      description: t('projects.water.description'),
       image: waterProject,
-      impact: "50+ wells built, serving 15,000+ people",
+      impact: t('projects.water.impact'),
       color: "water",
     },
     {
       icon: Utensils,
-      title: "Food Security",
-      description: "Distributing nutritious meals and emergency food supplies while supporting local agriculture and farming initiatives.",
+      title: t('projects.food.title'),
+      description: t('projects.food.description'),
       image: foodDistribution,
-      impact: "Monthly food aid to 500+ families",
+      impact: t('projects.food.impact'),
       color: "earth",
     },
     {
       icon: GraduationCap,
-      title: "Education Programs",
-      description: "Building schools, providing educational materials, and training teachers to ensure quality education for all children.",
+      title: t('projects.education.title'),
+      description: t('projects.education.description'),
       image: educationProgram,
-      impact: "3 schools built, 800+ children enrolled",
+      impact: t('projects.education.impact'),
       color: "hope",
     },
     {
       icon: Stethoscope,
-      title: "Healthcare Services",
-      description: "Mobile health clinics, vaccination programs, and maternal care services bringing essential healthcare to remote areas.",
+      title: t('projects.healthcare.title'),
+      description: t('projects.healthcare.description'),
       image: healthcareClinic,
-      impact: "2,000+ patients treated monthly",
+      impact: t('projects.healthcare.impact'),
       color: "warmth",
     },
   ];
@@ -47,11 +49,10 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Impact Projects
+            {t('projects.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Through focused programs in essential areas, we're creating sustainable change 
-            that transforms lives and strengthens communities across Somalia.
+            {t('projects.description')}
           </p>
         </div>
 
@@ -81,7 +82,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
                 <Button variant="outline" className="w-full group">
-                  Learn More 
+                  {t('common.learnMore')}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
@@ -91,7 +92,7 @@ const ProjectsSection = () => {
 
         <div className="text-center">
           <Button size="lg" className="bg-hope hover:bg-hope/90 text-white px-8">
-            See All Projects <ArrowRight className="ml-2 h-5 w-5" />
+            {t('projects.seeAll')} <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

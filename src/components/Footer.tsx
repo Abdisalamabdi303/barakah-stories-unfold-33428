@@ -1,26 +1,28 @@
 import { Heart, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/language-context";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Our Projects", href: "#projects" },
-    { name: "How to Help", href: "#help" },
-    { name: "Contact Us", href: "#contact" },
+    { name: t('footer.quickLinks.about'), href: "#about" },
+    { name: t('footer.quickLinks.projects'), href: "#projects" },
+    { name: t('footer.quickLinks.help'), href: "#help" },
+    { name: t('footer.quickLinks.contact'), href: "#contact" },
   ];
 
   const programs = [
-    { name: "Clean Water Projects", href: "#" },
-    { name: "Food Distribution", href: "#" },
-    { name: "Education Programs", href: "#" },
-    { name: "Healthcare Services", href: "#" },
+    { name: t('footer.programs.water'), href: "#" },
+    { name: t('footer.programs.food'), href: "#" },
+    { name: t('footer.programs.education'), href: "#" },
+    { name: t('footer.programs.health'), href: "#" },
   ];
 
   const resources = [
-    { name: "Annual Reports", href: "#" },
-    { name: "Financial Transparency", href: "#" },
-    { name: "Volunteer Portal", href: "#" },
-    { name: "Emergency Updates", href: "#" },
+    { name: t('footer.resources.reports'), href: "#" },
+    { name: t('footer.resources.transparency'), href: "#" },
+    { name: t('footer.resources.volunteer'), href: "#" },
+    { name: t('footer.resources.updates'), href: "#" },
   ];
 
   return (
@@ -32,31 +34,30 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4 sm:mb-6">
               <Heart className="h-6 sm:h-8 w-6 sm:w-8 text-hope-light flex-shrink-0" />
-              <span className="text-lg sm:text-xl font-bold">Somali Barakah Organization</span>
+              <span className="text-lg sm:text-xl font-bold">{t('nav.orgName')}</span>
             </div>
             <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-              Dedicated to transforming lives through sustainable humanitarian programs 
-              that create lasting impact in Somalia's most vulnerable communities.
+              {t('footer.description')}
             </p>
             <div className="space-y-2">
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 text-hope-light" />
-                <span className="text-sm">Mogadishu, Somalia</span>
+                <span className="text-sm">{t('footer.address')}</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-2 text-hope-light" />
-                <span className="text-sm">+252 123 456 789</span>
+                <span className="text-sm">{t('footer.phone')}</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-2 text-hope-light" />
-                <span className="text-sm">info@somalibarakah.org</span>
+                <span className="text-sm">{t('footer.email')}</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t('footer.quickLinksTitle')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -73,7 +74,7 @@ const Footer = () => {
 
           {/* Programs */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Our Programs</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t('footer.programsTitle')}</h3>
             <ul className="space-y-2">
               {programs.map((program) => (
                 <li key={program.name}>
@@ -90,7 +91,7 @@ const Footer = () => {
 
           {/* Resources & Newsletter */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Resources</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{t('footer.resourcesTitle')}</h3>
             <ul className="space-y-2 mb-4 sm:mb-6">
               {resources.map((resource) => (
                 <li key={resource.name}>

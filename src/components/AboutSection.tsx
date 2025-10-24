@@ -1,28 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Target, Shield } from "lucide-react";
 import teamWork from "@/assets/ramadan-distribution-event.jpg";
+import { useLanguage } from "@/lib/language-context";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
   const values = [
     {
       icon: Shield,
-      title: "Integrity",
-      description: "Upholding transparency, fairness, and public trust in all our operations.",
+      title: t('about.values.honesty'),
+      description: t('about.values.honestyDesc'),
     },
     {
       icon: Users,
-      title: "Collaboration",
-      description: "Working with all stakeholders, locally and internationally, to achieve greater impact.",
+      title: t('about.values.cooperation'),
+      description: t('about.values.cooperationDesc'),
     },
     {
       icon: Target,
-      title: "Sustainable Development",
-      description: "Seeking lasting solutions for community improvement and self-sufficiency.",
+      title: t('about.values.sustainability'),
+      description: t('about.values.sustainabilityDesc'),
     },
     {
       icon: Heart,
-      title: "Quality and Competence",
-      description: "Ensuring high-standard, evidence-based humanitarian services.",
+      title: t('about.values.quality'),
+      description: t('about.values.qualityDesc'),
     },
   ];
 
@@ -31,23 +33,18 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            About Somali Barakah Organization
+            {t('about.title')}
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            Somali Barakah Organization is an independent humanitarian institution serving communities on a voluntary basis. 
-            Our goal is to ensure every Somali has access to essential services and resources to build a healthier, 
-            more prosperous future through evidence-based programs, professional training, and community empowerment - 
-            working in collaboration with both Somali and international organizations.
+            {t('about.description')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
           <div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Our Mission</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">{t('about.mission.title')}</h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-              To improve the quality of life for Somali communities by establishing reliable systems for delivering 
-              essential services, strengthening local capacity through training and education, and ensuring emergency 
-              preparedness to respond effectively to humanitarian crises.
+              {t('about.mission.text')}
             </p>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
@@ -59,20 +56,19 @@ const AboutSection = () => {
           </div>
           
           <div className="mt-8 lg:mt-0">
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Our Vision</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">{t('about.vision.title')}</h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-              "To achieve a healthy, prosperous Somali society with access to essential services, 
-              high-quality programs, and a system capable of responding swiftly to humanitarian challenges."
+              {t('about.vision.text')}
             </p>
             <div className="bg-hope-light/30 rounded-lg p-6">
-              <h4 className="font-semibold text-foreground mb-4">Our Objectives</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('about.objectives.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Monitoring and addressing humanitarian needs within communities</li>
-                <li>• Providing essential services through sustainable programs</li>
-                <li>• Strengthening data collection and impact research</li>
-                <li>• Enhancing local workforce capacity to address challenges</li>
-                <li>• Responding to emergencies and crises effectively</li>
-                <li>• Collaborating with national and international organizations</li>
+                <li>• {t('about.objectives.item1')}</li>
+                <li>• {t('about.objectives.item2')}</li>
+                <li>• {t('about.objectives.item3')}</li>
+                <li>• {t('about.objectives.item4')}</li>
+                <li>• {t('about.objectives.item5')}</li>
+                <li>• {t('about.objectives.item6')}</li>
               </ul>
             </div>
           </div>
@@ -80,7 +76,7 @@ const AboutSection = () => {
 
         {/* Core Values */}
         <div>
-          <h3 className="text-2xl sm:text-3xl font-bold text-center text-foreground mb-8 sm:mb-12">Our Core Values</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-foreground mb-8 sm:mb-12">{t('about.values.title')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {values.map((value, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow bg-card">

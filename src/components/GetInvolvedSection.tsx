@@ -1,46 +1,48 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Megaphone, ArrowRight, CheckCircle } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 const GetInvolvedSection = () => {
+  const { t } = useLanguage();
   const ways = [
     {
       icon: Heart,
-      title: "Volunteering & Consultancy",
-      description: "Join us as a volunteer or expert consultant to help advance our humanitarian projects and make a direct impact in communities.",
+      title: t('getInvolved.ways.volunteering.title'),
+      description: t('getInvolved.ways.volunteering.description'),
       benefits: [
-        "Make a tangible difference in people's lives",
-        "Gain valuable field experience",
-        "Work with dedicated professionals",
-        "Flexible engagement options",
+        t('getInvolved.ways.volunteering.benefits.b1'),
+        t('getInvolved.ways.volunteering.benefits.b2'),
+        t('getInvolved.ways.volunteering.benefits.b3'),
+        t('getInvolved.ways.volunteering.benefits.b4'),
       ],
-      action: "Apply to Volunteer",
+      action: t('getInvolved.ways.volunteering.action'),
       color: "hope",
     },
     {
       icon: Users,
-      title: "Professional Development",
-      description: "Register for training programs in humanitarian response, community development, and emergency preparedness to build your skills.",
+      title: t('getInvolved.ways.development.title'),
+      description: t('getInvolved.ways.development.description'),
       benefits: [
-        "Professional certification programs",
-        "Hands-on practical training",
-        "Networking opportunities",
-        "Career advancement support",
+        t('getInvolved.ways.development.benefits.b1'),
+        t('getInvolved.ways.development.benefits.b2'),
+        t('getInvolved.ways.development.benefits.b3'),
+        t('getInvolved.ways.development.benefits.b4'),
       ],
-      action: "View Training Programs",
+      action: t('getInvolved.ways.development.action'),
       color: "water",
     },
     {
       icon: Megaphone,
-      title: "Community Awareness",
-      description: "Participate in community campaigns and help spread awareness about essential services, health, hygiene, and humanitarian support.",
+      title: t('getInvolved.ways.awareness.title'),
+      description: t('getInvolved.ways.awareness.description'),
       benefits: [
-        "Support community education",
-        "Promote health and wellbeing",
-        "Engage with local communities",
-        "Amplify our message",
+        t('getInvolved.ways.awareness.benefits.b1'),
+        t('getInvolved.ways.awareness.benefits.b2'),
+        t('getInvolved.ways.awareness.benefits.b3'),
+        t('getInvolved.ways.awareness.benefits.b4'),
       ],
-      action: "Join Campaigns",
+      action: t('getInvolved.ways.awareness.action'),
       color: "warmth",
     },
   ];
@@ -50,11 +52,10 @@ const GetInvolvedSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Get Involved
+            {t('getInvolved.title')}
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-            There are many ways you can contribute to our mission and help us create 
-            lasting positive change in Somali communities.
+            {t('getInvolved.description')}
           </p>
         </div>
 
@@ -97,11 +98,10 @@ const GetInvolvedSection = () => {
         {/* Donation CTA */}
         <div className="bg-gradient-to-r from-hope to-water rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 text-center text-white">
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
-            Make a Donation Today
+            {t('getInvolved.donate.title')}
           </h3>
           <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto opacity-90">
-            Your generous donation helps us provide essential services to those who need them most. 
-            Every contribution creates lasting impact.
+            {t('getInvolved.donate.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -109,14 +109,14 @@ const GetInvolvedSection = () => {
               variant="outline" 
               className="bg-white text-hope hover:bg-white/90 border-none px-8"
             >
-              One-Time Donation <Heart className="ml-2 h-5 w-5" />
+              {t('getInvolved.donate.oneTime')} <Heart className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="bg-white/10 text-white hover:bg-white/20 border-2 border-white px-8"
             >
-              Monthly Giving <ArrowRight className="ml-2 h-5 w-5" />
+              {t('getInvolved.donate.monthly')} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>

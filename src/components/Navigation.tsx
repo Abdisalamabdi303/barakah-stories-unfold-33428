@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Our Services", href: "#services" },
-    { name: "Focus Areas", href: "#focus" },
-    { name: "News & Updates", href: "#news" },
-    { name: "Get Involved", href: "#get-involved" },
-    { name: "Contact", href: "#contact" },
+    { name: t('nav.home'), href: "#home" },
+    { name: t('nav.about'), href: "#about" },
+    { name: t('nav.services'), href: "#services" },
+    { name: t('nav.projects'), href: "#projects" },
+    { name: t('nav.getInvolved'), href: "#get-involved" },
+    { name: t('nav.contact'), href: "#contact" },
   ];
 
   return (
@@ -21,9 +22,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Heart className="h-6 w-6 md:h-8 md:w-8 text-hope flex-shrink-0" />
+            <img src="/logo.png" alt={t('nav.orgName')} className="h-8 w-8 md:h-10 md:w-10 object-contain flex-shrink-0" />
             <span className="text-base sm:text-lg md:text-xl font-bold text-foreground line-clamp-1">
-              Somali Barakah Organization
+              {t('nav.orgName')}
             </span>
           </div>
 
@@ -39,7 +40,16 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="default" className="bg-hope hover:bg-hope/90 text-white whitespace-nowrap">
-              Donate Now
+              {t('nav.donate')}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+              className="flex items-center gap-2"
+            >
+              <Globe className="h-4 w-4" />
+              {t('nav.switchLang')}
             </Button>
           </div>
 
@@ -70,7 +80,15 @@ const Navigation = () => {
                 </a>
               ))}
               <Button variant="default" className="bg-hope hover:bg-hope/90 text-white w-full mt-2">
-                Donate Now
+                {t('nav.donate')}
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+                className="flex items-center justify-center gap-2 w-full"
+              >
+                <Globe className="h-4 w-4" />
+                {t('nav.switchLang')}
               </Button>
             </div>
           </div>

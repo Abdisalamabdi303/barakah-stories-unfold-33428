@@ -1,31 +1,33 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Activity, AlertTriangle, BookOpen, Megaphone, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Activity,
-      title: "Community Monitoring & Assessment",
-      description: "We monitor community needs and humanitarian challenges - such as food insecurity, water access, health concerns, and education gaps - working with field teams to respond to community welfare and development.",
+      title: t('services.monitoring.title'),
+      description: t('services.monitoring.description'),
       color: "water",
     },
     {
       icon: AlertTriangle,
-      title: "Humanitarian Emergency Response",
-      description: "Rapid response to humanitarian emergencies such as floods, droughts, disease outbreaks, and displacement crises with essential relief supplies and support services.",
+      title: t('services.emergency.title'),
+      description: t('services.emergency.description'),
       color: "warmth",
     },
     {
       icon: BookOpen,
-      title: "Capacity Building & Training",
-      description: "We conduct professional training and capacity-building programs for community workers, volunteers, and local leaders to strengthen humanitarian response and sustainable development.",
+      title: t('services.capacity.title'),
+      description: t('services.capacity.description'),
       color: "earth",
     },
     {
       icon: Megaphone,
-      title: "Awareness & Community Education",
-      description: "We deliver reliable information to communities on essential topics like hygiene, nutrition, water safety, and disease prevention through media campaigns and direct community engagement.",
+      title: t('services.awareness.title'),
+      description: t('services.awareness.description'),
       color: "hope",
     },
   ];
@@ -35,11 +37,10 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Our Services
+            {t('services.title')}
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-            Comprehensive humanitarian programs designed to address the most critical needs 
-            and build resilient communities across Somalia.
+            {t('services.description')}
           </p>
         </div>
 
@@ -63,7 +64,7 @@ const ServicesSection = () => {
                   variant="ghost" 
                   className="text-hope hover:text-hope/80 px-0"
                 >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('common.learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -75,7 +76,7 @@ const ServicesSection = () => {
             size="lg" 
             className="bg-hope hover:bg-hope/90 text-white px-8"
           >
-            View All Programs <ArrowRight className="ml-2 h-5 w-5" />
+            {t('services.viewAll')} <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

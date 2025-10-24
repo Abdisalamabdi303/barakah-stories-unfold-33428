@@ -4,18 +4,19 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Shield, Building } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-hope-light/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Get in Touch
+            {t('contact.title')}
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            Have questions about our work or want to get involved? We'd love to hear from you. 
-            Reach out and join us in making a difference.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -24,37 +25,37 @@ const ContactSection = () => {
           <div className="lg:col-span-2">
             <Card className="shadow-lg">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Send us a Message</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">{t('contact.form.title')}</h3>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="firstName" className="text-foreground">First Name</Label>
-                      <Input id="firstName" placeholder="Your first name" className="mt-1" />
+                      <Label htmlFor="firstName" className="text-foreground">{t('contact.form.firstName')}</Label>
+                      <Input id="firstName" placeholder={t('contact.form.firstNamePlaceholder')} className="mt-1" />
                     </div>
                     <div>
-                      <Label htmlFor="lastName" className="text-foreground">Last Name</Label>
-                      <Input id="lastName" placeholder="Your last name" className="mt-1" />
+                      <Label htmlFor="lastName" className="text-foreground">{t('contact.form.lastName')}</Label>
+                      <Input id="lastName" placeholder={t('contact.form.lastNamePlaceholder')} className="mt-1" />
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-foreground">Email Address</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" className="mt-1" />
+                    <Label htmlFor="email" className="text-foreground">{t('contact.form.email')}</Label>
+                    <Input id="email" type="email" placeholder={t('contact.form.emailPlaceholder')} className="mt-1" />
                   </div>
                   <div>
-                    <Label htmlFor="subject" className="text-foreground">Subject</Label>
-                    <Input id="subject" placeholder="What is this regarding?" className="mt-1" />
+                    <Label htmlFor="subject" className="text-foreground">{t('contact.form.subject')}</Label>
+                    <Input id="subject" placeholder={t('contact.form.subjectPlaceholder')} className="mt-1" />
                   </div>
                   <div>
-                    <Label htmlFor="message" className="text-foreground">Message</Label>
+                    <Label htmlFor="message" className="text-foreground">{t('contact.form.message')}</Label>
                     <Textarea 
                       id="message" 
-                      placeholder="Tell us how we can help you..." 
+                      placeholder={t('contact.form.messagePlaceholder')}
                       rows={6}
                       className="mt-1" 
                     />
                   </div>
                   <Button className="w-full bg-hope hover:bg-hope/90 text-white">
-                    Send Message
+                    {t('contact.form.submit')}
                   </Button>
                 </form>
               </CardContent>
@@ -65,34 +66,34 @@ const ContactSection = () => {
           <div className="space-y-6">
             <Card className="shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-4">Contact Information</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">{t('contact.info.title')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 text-hope mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">Main Office</p>
-                      <p className="text-muted-foreground">123 Humanitarian Way<br />Mogadishu, Somalia</p>
+                      <p className="font-semibold text-foreground">{t('contact.info.officeTitle')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.address')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Phone className="h-5 w-5 text-hope mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">Phone</p>
-                      <p className="text-muted-foreground">+252 123 456 789</p>
+                      <p className="font-semibold text-foreground">{t('contact.info.phoneTitle')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.phoneNumber')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="h-5 w-5 text-hope mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">Email</p>
-                      <p className="text-muted-foreground">info@somalibarakah.org</p>
+                      <p className="font-semibold text-foreground">{t('contact.info.emailTitle')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.emailAddress')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-hope mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">Office Hours</p>
-                      <p className="text-muted-foreground">Mon - Fri: 8:00 AM - 5:00 PM<br />Sat: 9:00 AM - 2:00 PM</p>
+                      <p className="font-semibold text-foreground">{t('contact.info.hoursTitle')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.hours')}</p>
                     </div>
                   </div>
                 </div>
